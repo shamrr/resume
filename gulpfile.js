@@ -27,7 +27,7 @@ gulp.task('styles', function() {
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
         .pipe(autoprefixer())
         .pipe(cleanCSS({compatibility: 'ie8'}))
-        .pipe(gulp.dest("src/css/"))
+        .pipe(gulp.dest("dist/css/"))
         .pipe(browserSync.stream());
 });
 
