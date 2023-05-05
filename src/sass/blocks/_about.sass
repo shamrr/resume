@@ -1,0 +1,23 @@
+.about
+    padding: 11.8rem 0 12rem 0
+    @include respond(tab-port)
+        padding: 8rem 0 8rem 0
+    @include respond(phone)
+        padding: 8rem 0 8rem 0
+    &__subtitle
+        position: relative
+        z-index: 1
+        padding-left: 1.5rem
+        margin-bottom: 1.5rem
+        @include before_circle      
+    &__title
+        font-size: 3.6rem
+        @include respond(tab-port)
+            font-size: 3rem
+    &__divider
+        margin-bottom: 2rem
+    &__text
+        font-weight: 500
+        font-size: 1.4rem
+        line-height: 3rem
+        color: #000

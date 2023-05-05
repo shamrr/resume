@@ -1,0 +1,26 @@
+.sidepanel
+    position: fixed
+    top: 50%
+    transform: translateY(-50%)
+    right: -14rem
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 33rem
+    transform: scaleX(-1)
+    transform: rotate(90deg)
+    cursor: pointer
+    z-index: 10
+    @include respond(tab-port)
+        top: 30rem
+    @include respond(phone)
+        display: none
+    &__divider
+        width: 7rem
+        height: .2rem
+        background-color: #000
+    &__text
+        font-weight: 700
+        font-size: 1.6rem
+        line-height: 2.4rem
+        color: #000
