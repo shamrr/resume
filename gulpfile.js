@@ -57,5 +57,10 @@ gulp.task('images', function () {
         .pipe(browserSync.stream());
 });
 
-gulp.task('build', gulp.series('styles', 'icons', 'html', 'images'));
-gulp.task('default', gulp.parallel('watch', 'server', 'styles', 'html', 'images', 'icons'));
+gulp.task('copy-js', function() {
+    return gulp.src('src/js/script.js')
+        .pipe(gulp.dest('dist/js'));
+});
+
+gulp.task('build', gulp.series('styles', 'icons', 'html', 'images', 'copy-js'));
+gulp.task('default', gulp.parallel('watch', 'server', 'styles', 'html', 'images', 'icons', 'copy-js'));
